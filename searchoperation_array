@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int findelelement(int arr[100],int n,int item)
+{  
+    int i;
+    for(i=0;i<n;i++){
+        if(arr[i]==item)
+        return i;
+    }
+    return -1;
+}
+int main(){
+    int arr[100],position,n,item,i;
+    cin>>n;    //no of elements
+    for(i=0;i<n;i++){
+        cin>>arr[i];
+    }
+   for (i=0;i<n;i++){
+    cout<<arr[i];
+   }
+   cout<<"enter element to search"<<endl;
+   cin>>item;
+   position= findelelement(arr,n,item);
+   if(position==-1){
+       cout<<"element not found"<<endl;
+   }
+   else{
+       cout<<"element at position" <<position+1<<endl;
+   }
+  
+   return 0; 
+}
