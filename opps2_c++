@@ -1,0 +1,32 @@
+//virtual function
+//abstraction
+#include<iostream>
+using namespace std;
+class Base_A{
+  public:
+  //pure virtual function 
+  //virtual void functionCompiled()=0;
+    // virtual functiona
+   virtual void functionCompiled(){
+      cout<<"printed the Base_A"<<endl;
+  }
+};
+ class Derived_B:public Base_A {
+    void functionCompiled(){
+        cout<<"printed the Derived_B"<<endl;
+    }
+  };
+  class Derived_c:public Base_A{
+      void functionCompiled(){
+        cout<<"printed the Derived_c"<<endl;
+    } 
+  };
+int main(){
+    Base_A* ex=new Derived_B;
+    ex->functionCompiled();
+      Base_A* ex1=new Derived_c;
+    ex1->functionCompiled();
+    return 0;
+
+}
+
