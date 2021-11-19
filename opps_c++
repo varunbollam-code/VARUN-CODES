@@ -1,0 +1,37 @@
+//classes and objects,constructor, encapsulation.......
+#include<iostream>
+using namespace std;
+class Student { 
+private:       
+    string Name;
+    string FatherName;
+    int Age;
+    long mobilenumber;
+public:
+    /*void Set_number(long Num){
+         mobilenumber=Num;
+    }
+    void Get_number(){
+        cout<<"your mobile number is "<<mobilenumber<<endl;
+    }*/
+    void GetDetails()
+    {
+    cout<<Name<<endl;
+    cout<<FatherName<<endl;
+    cout<<Age<<endl;
+    }
+    Student(string name,string fatherName,int age,long mobile){
+        Name=name;
+        FatherName=fatherName;
+        Age=age;
+        mobilenumber=mobile;
+    }
+};
+int main(){
+    Student st1("varun","sagar",18,123456789); 
+    st1.GetDetails();
+    Student st2("anil","odhelu",19,455555522);
+    st2.GetDetails();
+    //st1.Set_number(123456789);
+    //st1.Get_number();
+ }
