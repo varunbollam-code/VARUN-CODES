@@ -1,0 +1,28 @@
+//polymorphism run time poly..... with virtual function, and function overridding.
+#include<iostream>
+using namespace std;
+class Base{
+    public:
+  virtual void output(){
+    cout<<"this is base class"<<endl;
+  }
+  void hello(){
+    cout<<"Base of hello"<<endl;
+  }
+};
+class Derived : public Base{
+    void output(){
+    cout<<"this is derived class"<<endl;
+    }
+    void hello(){
+    cout<<"derived of hello"<<endl;
+  }
+};
+int main(){
+    Base* b1;
+    Derived d1;
+    b1=&d1;
+    b1->output();
+    b1->hello();
+    return 0;
+}
