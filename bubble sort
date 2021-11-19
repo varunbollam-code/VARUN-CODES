@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+void Bubblesort(int array[],int n)
+{
+    for( int i=0;i<n-1;i++){
+        int swap=0;
+        for(int j=0;j<n-i-1;j++)
+        {
+            if(array[j]>array[j+1])
+            {
+                int temp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=temp;
+                swap=1;
+            }
+        }
+        if(swap==0)
+        break;
+    }
+}
+void printarray(int array[],int n){
+    for(int j=0;j<n;j++){
+        cout<<array[j]<<endl;
+    }
+}
+int main()
+{
+    int arr[100];
+    int tot_ele;
+    cout<<"enter no of elements"<<endl;
+    cin>>tot_ele;
+    cout<<"enter elements"<<endl;
+    for(int i=0;i<tot_ele;i++)
+    {
+        cin>>arr[i];
+    }
+    Bubblesort(arr,tot_ele);
+    cout<<"sorted array"<<endl;
+    printarray(arr,tot_ele);
+    return 0;
+}
