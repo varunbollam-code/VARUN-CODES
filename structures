@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+struct Employee 
+{
+    string Name;
+    int age;
+    string field;
+};
+void Getinfo(Employee employe){
+    cout<<employe.Name<<endl;
+    cout<<employe.age<<endl;
+    cout<<employe.field<<endl;
+}
+struct EmployeeEducationDetails
+{
+    string University;
+    int yearofpassing;
+    Employee employeeEducationDetails;
+};
+void EducationDetails(EmployeeEducationDetails Details){
+    cout<<Details.University<<endl;
+    cout<<Details.yearofpassing<<endl;
+    Getinfo(Details.employeeEducationDetails);
+}
+int main(){
+    Employee e1;
+    e1.Name="varun";
+    e1.age=18;
+    e1.field="developer";
+    Getinfo(e1);
+    Employee e2;
+    e2.Name="rishik kumar";
+    e2.age=19;
+    e2.field="web designer";
+    Getinfo(e2);
+    EmployeeEducationDetails ed1;
+    ed1.University="lovely professional university";
+    ed1.yearofpassing=2018;
+    ed1.employeeEducationDetails=e1;
+    EducationDetails(ed1);
+    return 0;
+}
