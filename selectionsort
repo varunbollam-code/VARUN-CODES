@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void Selectionsort(int arr[],int n)
+{
+    int i,j;
+    for(i=0;i<n-1;i++)
+    {
+        int min=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[min])
+            min=j;
+        }
+        if(min!=i)
+        swap(arr[i],arr[min]);
+    }
+}
+void Printarray(int arr[],int n){
+    int i;
+    for(i=0;i<n;i++)
+    cout<<" "<<arr[i]<<endl;
+}
+int main(){
+    int array[100];
+    int tot_ele;
+    cout<<"enter no of elements"<<endl;
+    cin>>tot_ele;
+    cout<<"enter elements"<<endl;
+    for(int i=0;i<tot_ele;i++)
+    {
+        cin>>array[i];
+    }
+    Selectionsort(array,tot_ele);
+    cout<<"sorted array"<<endl;
+    Printarray(array,tot_ele);
+}
